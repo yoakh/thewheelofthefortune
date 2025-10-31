@@ -1,0 +1,43 @@
+{
+  "categories": {
+    "semaine1": {
+      "nom": "Semaine 1",
+      "phrases": [
+        {
+          "id": 1,
+          "phrase": "MAIS POURQUOI EST-IL AUSSI MECHANT ?",
+          "indice": "Pourquoi pas ?",
+          "difficulte": "facile",
+          "lettres_devoilees": ["M", "Q"]
+        }
+      ]
+     },"semaine2": {
+      "nom": "Semaine 2",
+      "phrases": [
+        {
+          "id": 1,
+          "phrase": "PAPA, COMMENT ON FAIT LES BEBES ?",
+          "indice": "Pourquoi pas ?",
+          "difficulte": "facile",
+          "lettres_devoilees": ["F", "B"]
+        }
+      ]
+     },"semaine3": {
+      "nom": "Semaine 3",
+      "phrases": [
+        {
+          "id": 1,
+          "phrase": "REVIENS LEON, J'AI LES MEME A LA MAISON !",
+          "indice": "Pourquoi pas ?",
+          "difficulte": "facile",
+          "lettres_devoilees": ["M", "V"]
+        }
+      ]
+    }
+  },
+  "config": {
+    "lettres_devoilees_debut": ["R", "S", "T", "L", "N", "E"],
+    "prix_voyelle": 2000,
+    "bonus_solution_complete": 1000
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "secteurs": [
+    {
+      "id": 1,
+      "valeur": 1500,
+      "label": "1500 F",
+      "couleur": "#f7dd3f",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 2,
+      "valeur": 2500,
+      "label": "2500 F",
+      "couleur": "#d98ff7",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 3,
+      "valeur": 2000,
+      "label": "2000 F",
+      "couleur": "#3792ea",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 4,
+      "valeur": 1500,
+      "label": "1500 F",
+      "couleur": "#dd0000",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 5,
+      "valeur": -1,
+      "label": "RELANCE",
+      "couleur": "#f7dd3f",
+      "type": "special",
+      "poids": 4
+    },
+    {
+      "id": 6,
+      "valeur": 500,
+      "label": "500 F",
+      "couleur": "#d98ff7",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 7,
+      "valeur": 1500,
+      "label": "1500 F",
+      "couleur": "#f7dd3f",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 8,
+      "valeur": 1000,
+      "label": "1000 F",
+      "couleur": "#3792ea",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 9,
+      "valeur": 3000,
+      "label": "3000 F",
+      "couleur": "#dd0000",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 10,
+      "valeur": -1,
+      "label": "PASSE",
+      "couleur": "#f7dd3f",
+      "type": "special",
+      "poids": 4
+    },
+    {
+      "id": 11,
+      "valeur": 1500,
+      "label": "1500 F",
+      "couleur": "#d98ff7",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 12,
+      "valeur": 2500,
+      "label": "2500 F",
+      "couleur": "#f7dd3f",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 13,
+      "valeur": 1500,
+      "label": "1500 F",
+      "couleur": "#d98ff7",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 14,
+      "valeur": 1000,
+      "label": "1000 F",
+      "couleur": "#3792ea",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 15,
+      "valeur": 2500,
+      "label": "2500 F",
+      "couleur": "#dd0000",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 16,
+      "valeur": 1000,
+      "label": "1000 F",
+      "couleur": "#f7dd3f",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 17,
+      "valeur": 1500,
+      "label": "1500 F",
+      "couleur": "#d98ff7",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 18,
+      "valeur": 2500,
+      "label": "2500 F",
+      "couleur": "#f68300",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 19,
+      "valeur": 0,
+      "label": "BANQUEROOT",
+      "couleur": "#000000",
+      "type": "special",
+      "poids": 8
+    },
+    {
+      "id": 20,
+      "valeur": 500,
+      "label": "500 F",
+      "couleur": "#f7dd3f",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 21,
+      "valeur": 3000,
+      "label": "3000 F",
+      "couleur": "#3792ea",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 22,
+      "valeur": 2000,
+      "label": "2000 F",
+      "couleur": "#dd0000",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 23,
+      "valeur": 1500,
+      "label": "1500 F",
+      "couleur": "#f7dd3f",
+      "type": "points",
+      "poids": 4
+    },
+    {
+      "id": 24,
+      "valeur": 500,
+      "label": "500 F",
+      "couleur": "#d98ff7",
+      "type": "points",
+      "poids": 4
+    }
+  ],
+  "config": {
+    "animation_duration": 2000,
+    "min_spins": 3,
+    "max_spins": 8
+  }
+}

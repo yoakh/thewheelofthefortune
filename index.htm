@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roue de la Fortune</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Zone Score et Infos -->
+        <div class="score-zone">
+            <div class="score-item">
+                <div class="score-label">Score Total</div>
+                <div class="score-value" id="score-total">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Score Manche</div>
+                <div class="score-value" id="score-manche">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Joueur</div>
+                <div class="score-value">Joueur 1</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Catégorie</div>
+                <select id="categorie-select" class="categorie-dropdown">
+                    <option value="">Chargement...</option>
+                </select>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Lettres Trouvées</div>
+                <div class="score-value" id="lettres-trouvees">0 / 26</div>
+            </div>
+        </div>
+
+        <!-- Zone Roue -->
+        <div class="roue-zone">
+            <div class="roue-wrapper">
+                <div class="roue-container">
+                    <!-- La roue elle-même, sans le pointeur -->
+                </div>
+                <div class="roue-pointer"></div>
+            </div>
+            <button class="spin-button" id="spin-btn">Faire tourner la roue</button>
+            <div class="roue-result">
+                <div>Résultat : <strong id="roue-resultat">-</strong></div>
+            </div>
+        </div>
+
+        <!-- Zone Phrase à deviner -->
+        <div class="phrase-zone">
+            <div class="phrase-title">RW5pZ21l</div>
+            <div class="phrase-info">
+                <span id="phrase-categorie">Catégorie</span> - 
+                <span id="phrase-difficulte">Difficulté</span>
+            </div>
+            
+            <!-- Conteneur dynamique pour les lignes -->
+            <div id="phrase-container">
+                <div class="phrase-grid" id="phrase-line-1"></div>
+                <div class="phrase-grid" id="phrase-line-2"></div>
+                <div class="phrase-grid" id="phrase-line-3"></div>
+            </div>
+
+            <div class="phrase-hint" id="phrase-indice">
+                "Cliquez sur une lettre du clavier ou faites tourner la roue !"
+            </div>
+        </div>
+
+  
+
+        <!-- Zone Clavier -->
+        <div class="clavier-zone">
+            <div class="clavier-grid" id="clavier">
+                <!-- Les lettres seront générées par JavaScript -->
+            </div>
+        </div>
+
+        <!-- Zone Actions -->
+        <div class="actions-zone">
+            <button class="action-button btn-nouvelle-partie" id="nouvelle-partie-btn">Nouvelle Partie</button>
+            <button class="action-button btn-acheter-voyelle" id="acheter-voyelle-btn">Acheter Voyelle (2000F)</button>
+            <button class="action-button btn-proposer-mot" id="proposer-mot-btn">Proposer la Solution</button>
+            <button class="action-button btn-triche" id="triche-btn">🔮 Triche</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
