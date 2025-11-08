@@ -41,6 +41,9 @@ const elements = {
     roueContainer: null
 };
 
+
+// Lancer au chargement de la page
+document.addEventListener('DOMContentLoaded', prechargerImages);
 /**
  * Initialisation de l'application
  */
@@ -56,6 +59,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     initClavier();
     initEventListeners();
     nouvellePartie();
+
+    
     
     console.log('✅ Jeu initialisé avec succès !');
 });
@@ -1451,6 +1456,32 @@ function afficherMessageModal(type, message = null, duree = 4000) {
         }
     }, duree);
 }
+
+
+javascript/**
+ * Précharger les images pour éviter les échecs de chargement
+ */
+function prechargerImages() {
+    const imagesAPrecharger = [
+        './assets/triche/evil.gif',
+        './assets/triche/sneaky.gif',
+        './assets/banqueroute/boom.gif',
+        './assets/banqueroute/explosion.gif',
+        './assets/passe/skip.gif',
+        './assets/jackpot/celebration.gif',
+        './assets/success/win.gif'
+        // Ajoute tes autres GIFs ici
+    ];
+    
+    imagesAPrecharger.forEach(url => {
+        const img = new Image();
+        img.src = url;
+        console.log(`📥 Préchargement: ${url}`);
+    });
+    
+    console.log('🖼️ Préchargement des images lancé');
+}
+
 
 /**
  * Traiter le résultat de la roue
