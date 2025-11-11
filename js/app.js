@@ -1350,18 +1350,12 @@ function afficherMessageModal(type, message = null, duree = 4000) {
             titre: 'VIENS ICI VILAIN GARCON !',
             couleurs: ['#4CAF50', '#388E3C'],
             gifs: [
-                './assets/success/annie.gif'
+                './assets/success/christophe.jpg'
             ],
             messagesAleatoires: [
                 "Excellent travail ! Vous maîtrisez !",
                 "Phrase trouvée ! Vous êtes un génie !",
-                "Victoire écrasante ! Bravo champion !",
-                "Parfait ! Vous avez tout bon !",
-                "Magnifique ! Un sans-faute !",
-                "Vous dominez ce jeu ! Impressionnant !",
-                "Réussite totale ! Chapeau bas !",
-                "Mission accomplie avec brio !",
-                "Phrase complète ! Félicitations !"
+                "Victoire écrasante ! Bravo champion !"
             ]
         },
         error: {
