@@ -22,6 +22,28 @@
           "lettres_devoilees": ["W"]
         }
       ]
+     },"11nov": {
+      "nom": "11 novembre",
+      "phrases": [
+        {
+          "id": 1,
+          "phrase": "ON VA VOIR LES?",
+          "indice": "Même pas en rêve !",
+          "difficulte": "facile",
+          "lettres_devoilees": ["X"]
+        }
+      ]
+     },"11novHARD": {
+      "nom": "11 novembre HARD",
+      "phrases": [
+        {
+          "id": 1,
+          "phrase": "ONVAVOIRLESVACHES",
+          "indice": "Tu mérites pas d'indice !",
+          "difficulte": "Mayhem",
+          "lettres_devoilees": ["X"]
+        }
+      ]
      },"semaine3": {
       "nom": "Semaine 3",
       "phrases": [
