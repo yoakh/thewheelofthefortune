@@ -18,4 +18,3 @@ Un jeu de la Roue de la Fortune en JavaScript vanilla, fidèle au jeu télévis�
 **En ligne :** [https://TON_PSEUDO.github.io/roue-de-la-fortune](https://TON_PSEUDO.github.io/roue-de-la-fortune)
 
 **Localement :**
-```bash

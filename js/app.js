@@ -1350,12 +1350,10 @@ function afficherMessageModal(type, message = null, duree = 4000) {
             titre: 'VIENS ICI VILAIN GARCON !',
             couleurs: ['#4CAF50', '#388E3C'],
             gifs: [
-                './assets/success/christophe.jpg'
+                './assets/success/christophe.gif'
             ],
             messagesAleatoires: [
-                "Excellent travail ! Vous maîtrisez !",
-                "Phrase trouvée ! Vous êtes un génie !",
-                "Victoire écrasante ! Bravo champion !"
+                "Excellent travail ! Vous maîtrisez !"
             ]
         },
         error: {
@@ -1374,39 +1372,63 @@ function afficherMessageModal(type, message = null, duree = 4000) {
             ]
         }
     };
-    
-    const config = configs[type] || configs.error;
-    
-    // Utiliser le message fourni ou en choisir un aléatoire
+     const config = configs[type] || configs.error;
     const messageFinal = message || config.messagesAleatoires[Math.floor(Math.random() * config.messagesAleatoires.length)];
     
-    // Créer le message
-    const messageEl = document.createElement('div');
-    messageEl.className = `message-modal message-${type}`;
-    
-    // Choisir un média aléatoire
+    // Choisir le média
     const mediaTypes = config.gifs.length > 0 ? ['gif', 'texte'] : ['texte'];
     const typeMedia = mediaTypes[Math.floor(Math.random() * mediaTypes.length)];
     
-    let contenuMedia = '';
     if (typeMedia === 'gif' && config.gifs.length > 0) {
         const gif = config.gifs[Math.floor(Math.random() * config.gifs.length)];
+        
+        // ✨ PRÉCHARGER L'IMAGE AVANT D'AFFICHER LE MODAL
+        const img = new Image();
+        
+        img.onload = () => {
+            // Image chargée ✅ → Afficher le modal
+            creerEtAfficherModal(config, messageFinal, type, duree, img.src);
+        };
+        
+        img.onerror = () => {
+            // Image pas chargée ❌ → Afficher modal avec texte
+            creerEtAfficherModal(config, messageFinal, type, duree, null);
+        };
+        
+        // Timeout si l'image met trop de temps
+        setTimeout(() => {
+            if (!img.complete) {
+                console.log('⏰ Image timeout, affichage sans image');
+                creerEtAfficherModal(config, messageFinal, type, duree, null);
+            }
+        }, 3000); // 3 secondes max pour charger
+        
+        img.src = gif;
+    } else {
+        // Pas de gif → Afficher directement
+        creerEtAfficherModal(config, messageFinal, type, duree, null);
+    }
+}
+
+function creerEtAfficherModal(config, messageFinal, type, duree, imageSrc) {
+    const messageEl = document.createElement('div');
+    messageEl.className = `message-modal message-${type}`;
+    
+    let contenuMedia = '';
+    if (imageSrc) {
+        // Image préchargée ✅
         contenuMedia = `
-            <img src="${gif}" 
+            <img src="${imageSrc}" 
                  alt="${type} GIF" 
-                 style="width: 320px; height: 240px; border-radius: 10px; object-fit: cover;"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div style="display: none; font-size: 60px; font-weight: bold; color: rgba(255,255,255,0.8);">
-                ${type.toUpperCase()}
-            </div>
+                 style="width: 320px; height: 240px; border-radius: 10px; object-fit: cover;">
         `;
     } else {
-        // Texte stylé au lieu d'emoji
+        // Texte de fallback
         const textesStyles = {
             triche: 'CHEAT MODE',
             banqueroute: 'BANKRUPT',
             passe: 'SKIP TURN',
-            jackpot: 'JACKPOT',
+            relance: 'SPIN AGAIN',
             success: 'SUCCESS',
             error: 'ERROR'
         };
@@ -1419,7 +1441,7 @@ function afficherMessageModal(type, message = null, duree = 4000) {
         `;
     }
     
-    // Construire le contenu
+    // Le reste de ton code pour construire le modal...
     messageEl.innerHTML = `
         <div style="font-size: 24px; margin-bottom: 15px; animation: glow 1s infinite alternate; 
                     font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">
@@ -1433,12 +1455,9 @@ function afficherMessageModal(type, message = null, duree = 4000) {
         </div>
     `;
     
-    // Styles dynamiques
     messageEl.style.background = `linear-gradient(135deg, ${config.couleurs[0]}, ${config.couleurs[1]})`;
-    
     document.body.appendChild(messageEl);
     
-    // Supprimer après la durée spécifiée
     setTimeout(() => {
         if (messageEl.parentNode) {
             messageEl.style.animation = 'modalDisappear 0.5s ease-out forwards';
@@ -1450,7 +1469,6 @@ function afficherMessageModal(type, message = null, duree = 4000) {
         }
     }, duree);
 }
-
 
 javascript/**
  * Précharger les images pour éviter les échecs de chargement
