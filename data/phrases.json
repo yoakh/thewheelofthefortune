@@ -55,6 +55,17 @@
           "lettres_devoilees": ["M", "V"]
         }
       ]
+    },"semaine4": {
+      "nom": "Semaine 4",
+      "phrases": [
+        {
+          "id": 1,
+          "phrase": "CA SE PASSE COMME CA",
+          "indice": "Pourquoi pas ?",
+          "difficulte": "facile",
+          "lettres_devoilees": []
+        }
+      ]
     }
   },
   "config": {
